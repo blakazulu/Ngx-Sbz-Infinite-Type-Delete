@@ -2,11 +2,15 @@
   "name": "typing-text-workspace",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint"
+    "build_lib": "ng build infinite-type-delete",
+    "npm_pack": "cd dist/infinite-type-delete && npm pack",
+    "package": "npm run build_lib && npm run npm_pack",
+    "copy-license": "copy .\\LICENSE .\\dist\\infinite-type-delete",
+    "copy-readme": "copy .\\README.md .\\dist\\infinite-type-delete",
+    "copy-files": "npm run copy-license && npm run copy-readme",
+    "npm-init": "cd dist/infinite-type-delete && npm init",
+    "npm-publish": "npm publish dist/infinite-type-delete/ngx-sbz-type-delete-1.0.0.tgz",
+    "npm-upadte-version": "cd dist/infinite-type-delete && npm version patch && npm publish"
   },
   "private": true,
   "dependencies": {
@@ -23,6 +27,7 @@
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "~0.1001.7",
     "@angular/cli": "~10.1.6",
     "@angular/compiler-cli": "~10.1.5",
     "@types/node": "^12.11.1",
@@ -36,6 +41,7 @@
     "karma-coverage-istanbul-reporter": "~3.0.2",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
+    "ng-packagr": "^10.1.0",
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",

@@ -1,0 +1,30 @@
+{
+  "name": "ngx-sbz-type-delete",
+  "version": "1.0.0",
+  "description": "This is directive for creating infinite type and delete effect",
+  "keywords": [
+    "Angular",
+    "Library",
+    "Directive",
+    "Animation",
+    "Text",
+    "Typing",
+    "Type",
+    "Delete",
+    "Cursor"
+  ],
+  "author": "Liraz Amir",
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/blakazulu/Ngx-Sbz-Infinite-Type-Delete"
+  },
+  "homepage": "https://liraz-sbz.com",
+  "peerDependencies": {
+    "@angular/common": "^10.1.6",
+    "@angular/core": "^10.1.6"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}

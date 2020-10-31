@@ -1,27 +1,62 @@
-# TypingTextWorkspace
+# An infinite type and delete animation in Angular 10
+![demo-gif](https://media.giphy.com/media/BLwsAn4Gs2IVShvRLe/giphy.gif)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.6.
+![Current Version](https://img.shields.io/badge/Current%20Version-1.0-brightgreen>)   
+ ![License](https://img.shields.io/badge/License-GNU%20General%20Public%20License%20v3.0-blue)
 
-## Development server
+An angular 10 component for infinite type and delete animation
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Demo
+* [Stackblitz]
+ 
+### Installation
+1. run this:
+   ```shell
+   npm i ngx-sbz-type-delete
+   ```
+2. go to app.module and add this:
+   ```shell
+   import { InfiniteTypeDeleteModule } from "ngx-sbz-type-delete";
+   
+   @NgModule({
+       imports: [
+           InfiniteTypeDeleteModule
+       ]
+   })
+   ```
+3. use like this:
+   ```shell
+    <ngx-sbz-type-delete [wordArray]="['hello']"></ngx-sbz-type-delete>
+   ```
+4.. Enjoy :)
 
-## Code scaffolding
+### Inputs to customize to animation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+| Input                   | Type     | Default     | Description                                                      |
+| ----------------------- | -------- | ----------- | ---------------------------------------------------------------- |
+| wordArray               | string[] | ----------- | array of strings to be displayed on screen                       |
+| textColor               | string   | 'black'     | text and blink color                                             |
+| fontSize                | string   | '20px'      | size of the text. suffix must be px/vw/vh                        |
+| blinkWidth              | string   | '2px'       | width of the blinking cursor at the end. suffix must be px/vw/vh |
+| typingSpeedMilliseconds | number   | 300         | delay between each letter typing. 1000 milliseconds => 1 second  |
+| deleteSpeedMilliseconds | number   | 300         | delay between each letter delete. 1000 milliseconds => 1 second  |
 
-## Build
+#### Contribution
+Want to contribute? Great!
+It's open source.
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Added some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+#### License
+* You can find the license here: [License]
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+[//]: # (
+These are reference links used in the body of this note and get stripped out when the markdown processor does its job.
+There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+   [Stackblitz]: <https://stackblitz.com/edit/ngx-sbz-infinite-type-delete?file=src/app/app.component.html>
+   [License]: <https://github.com/blakazulu/Ngx-Sbz-Infinite-Type-Delete/blob/main/LICENSE>
