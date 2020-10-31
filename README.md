@@ -1,7 +1,7 @@
 # An infinite type and delete animation in Angular 10
 ![demo-gif](https://media.giphy.com/media/BLwsAn4Gs2IVShvRLe/giphy.gif)
 
-![Current Version](https://img.shields.io/badge/Current%20Version-1.0-brightgreen>)   
+![Current Version](https://img.shields.io/badge/Current%20Version-2.0.1-brightgreen>)   
  ![License](https://img.shields.io/badge/License-GNU%20General%20Public%20License%20v3.0-blue)
 
 An angular 10 component for infinite type and delete animation
