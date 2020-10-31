@@ -9,7 +9,7 @@
     "copy-readme": "copy .\\README.md .\\dist\\infinite-type-delete",
     "copy-files": "npm run copy-license && npm run copy-readme",
     "npm-init": "cd dist/infinite-type-delete && npm init",
-    "npm-publish": "npm publish dist/infinite-type-delete/ngx-sbz-type-delete-1.0.0.tgz",
+    "npm-publish": "npm publish dist/infinite-type-delete/ngx-sbz-type-delete-2.0.0.tgz",
     "npm-upadte-version": "cd dist/infinite-type-delete && npm version patch && npm publish"
   },
   "private": true,

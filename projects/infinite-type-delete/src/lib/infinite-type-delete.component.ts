@@ -30,8 +30,7 @@ export class InfiniteTypeDeleteComponent implements AfterViewInit {
   @Input() typingSpeedMilliseconds = 300;
   @Input() deleteSpeedMilliseconds = 300;
 
-  private i = 0;
-  private timer: any;
+  private wordArrayCounter = 0;
 
   constructor(private renderer: Renderer2) {
   }
@@ -52,7 +51,7 @@ export class InfiniteTypeDeleteComponent implements AfterViewInit {
   }
 
   private typingEffect(): void {
-    const word = this.wordArray[this.i].split('');
+    const word = this.wordArray[this.wordArrayCounter].split('');
     const loopTyping = () => {
       if (word.length > 0) {
         this.textElement.nativeElement.innerHTML += word.shift();
@@ -60,27 +59,23 @@ export class InfiniteTypeDeleteComponent implements AfterViewInit {
         this.deletingEffect();
         return false;
       }
-      this.timer = setTimeout(loopTyping, this.typingSpeedMilliseconds);
+      setTimeout(loopTyping, this.typingSpeedMilliseconds);
     };
     loopTyping();
   }
 
   private deletingEffect(): void {
-    const word = this.wordArray[this.i].split('');
+    const word = this.wordArray[this.wordArrayCounter].split('');
     const loopDeleting = () => {
       if (word.length > 0) {
         word.pop();
         this.textElement.nativeElement.innerHTML = word.join('');
       } else {
-        if (this.wordArray.length > (this.i + 1)) {
-          this.i++;
-        } else {
-          this.i = 0;
-        }
+        this.wordArrayCounter = this.wordArray.length > this.wordArrayCounter + 1 ? this.wordArrayCounter++ : 0;
         this.typingEffect();
         return false;
       }
-      this.timer = setTimeout(loopDeleting, this.deleteSpeedMilliseconds);
+      setTimeout(loopDeleting, this.deleteSpeedMilliseconds);
     };
     loopDeleting();
   }
